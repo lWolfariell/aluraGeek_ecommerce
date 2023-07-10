@@ -1,3 +1,4 @@
+
 .produtos{
     padding: 0 !important;
     margin: 0 !important;
@@ -25,7 +26,7 @@
 .__tituloProd{
     color: var(--preto-100);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 .__valorProd{
@@ -62,12 +63,36 @@
 @media screen and (min-width: 769px) {
     .__prodClicadoContainer{
         flex-direction: row;
-        align-items: center;
-        justify-items: first baseline;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .__infoProd{
+        padding: 0;
     }
 
     .__imgProd img{
         max-width: 350px;
         max-height: 250px;
     }
+
+    .__tituloProd{
+        margin: 0;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .__prodClicadoContainer{
+        padding: 6rem;
+    }
+    
+    .__imgProd img{
+        max-width: 460px;
+        max-height: 300px;
+    }
+
+
 }
