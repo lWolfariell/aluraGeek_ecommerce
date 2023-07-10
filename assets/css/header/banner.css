@@ -1,0 +1,91 @@
+.__banner {
+    background-image: url(/assets/imagens/Hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 12rem;
+    gap: 1rem;
+    color: var(--branco);
+}
+
+.__content {
+    gap: 0.5rem;
+}
+
+.--text1 {
+    
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.--text2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.__verConsolesBtn {
+    display: flex;
+    padding: 0.75rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    background: var(--azul-100);
+    border: 1px solid var(--azul-100);
+    color: var(--branco);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .__banner {
+        height: 17rem;
+        opacity: 1;
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    .__content {
+        padding: 0 0 0 3rem;
+      }
+
+    .--text1 {
+        font-size: 3rem;
+        margin: 0;
+    }
+    
+    .--text2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    
+    .__banner {
+        height: 22rem;
+        opacity: 1;
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    .__content {
+        padding: 0 0 0 3rem;
+      }
+
+    .--text1 {
+        font-size: 5rem;
+        margin: 0;
+    }
+    
+    .--text2 {
+        font-size: 1.4rem;
+    }
+
+    
+}

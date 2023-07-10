@@ -1,0 +1,13 @@
+.produtos.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--preto-05);
+}
+
+@media screen and (min-width: 1025px) {
+    .produtos {
+        align-items: center;
+    }
+}
+

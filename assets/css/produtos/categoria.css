@@ -1,0 +1,26 @@
+
+.__categoriasProdutos {
+    display: flex;
+    flex-direction: column;
+}
+
+.__categoriaProdutos-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.--categoria {
+    font-size: var(--textoMaior);
+    font-weight: 600;
+    line-height: 1rem;
+    color: var(--preto-100);
+}
+
+.--verTudoBtn{
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--azul-100);
+}

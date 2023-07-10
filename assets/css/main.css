@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+:root {
+    --azul-10: #EAF2FD;
+    --azul-100: #2A7AE4;
+    --preto-05: #F5F5F5;
+    --preto-100: #464646;
+    --preto-30: #C8C8C8;
+    --preto-50: #A2A2A2;
+    --branco: #FFFFFF;
+    --textoMaior: 1.35rem;
+    --textoMenor: 0.9rem;
+}
+
+/* exemplo de variavel
+--main-color: black; */
+
+*{
+    font-family: 'Raleway', sans-serif;
+}

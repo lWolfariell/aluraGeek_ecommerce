@@ -1,0 +1,35 @@
+azul-10, #EAF2FD
+azul-100, #2A7AE4
+preto-05, #F5F5F5
+preto-100, #464646
+preto-30, #C8C8C8
+preto-50, #A2A2A2
+branco, #FFFFFF
+
+botao login:
+// On click
+// Navigate to: "Produtos-Home";
+// Animate: Dissolve;
+animation-timing-function: ease-out;
+animation-duration: 300ms;
+
+
+topo
+
+display: flex;
+height: 4.5rem;
+padding: 1rem;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+
+banner
+
+display: flex;
+height: 12rem;
+padding: 1rem;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+gap: 1rem;
+align-self: stretch;

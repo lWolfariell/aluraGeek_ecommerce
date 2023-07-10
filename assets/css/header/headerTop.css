@@ -1,0 +1,130 @@
+.__headerTop {
+    display: flex;
+    height: 4.5rem;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.--logo {
+    margin: 0;
+}
+
+.--logo img {
+    width: 10rem;
+}
+
+.__login {
+    border: 1px solid var(--azul-100);
+    background-color: var(--branco);
+    font-weight: 600;
+    color: var(--azul-100);
+    display: flex;
+    width: 8.3125rem;
+    padding: 0.75rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.__login a {
+    text-decoration: none;
+}
+
+#buscar {
+    display: none;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    #buscar {
+        display: block;
+    }
+
+    .__headerTop :nth-child(1) {
+        order: 1;
+    }
+
+    .__headerTop :nth-child(2) {
+        order: 3;
+    }
+
+    .__headerTop :nth-child(3) {
+        order: 2;
+    }
+
+    .__headerTop {
+        gap: 1rem;
+    }
+
+    .__barraDeBusca {
+        display: flex;
+        justify-content: space-between;
+        width: 17rem;
+        padding: 0.5rem 1rem;
+        gap: 0.5rem;
+        border-radius: 1.25rem;
+        background: var(--preto-05);
+        
+    }
+
+    .__barraDeBusca input {
+        border: none;
+        background: var(--preto-05);
+    }
+
+    .__login {
+        flex-grow: 2;
+        margin: 0 2rem 0 3rem;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+
+    #buscar {
+        display: block;
+    }
+
+    .__headerTop :nth-child(1) {
+        order: 1;
+    }
+
+    .__headerTop :nth-child(2) {
+        order: 3;
+    }
+
+    .__headerTop :nth-child(3) {
+        order: 2;
+    }
+
+    .__headerTop {
+        gap: 3rem;
+        margin: 0 3rem 0 3rem;
+    }
+
+    .__barraDeBusca {
+        display: flex;
+        justify-content: space-between;
+        width: 27rem;
+        padding: 0.5rem 1rem;
+        gap: 0.5rem;
+        border-radius: 1.25rem;
+        background: var(--preto-05);
+    }
+
+    .__barraDeBusca input {
+        border: none;
+        background: var(--preto-05);
+        width: 27rem;
+    }
+
+    .__login {
+        flex-grow: 2;
+        margin: 0 0 0 21rem;
+      }
+
+
+
+}
