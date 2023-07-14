@@ -1,74 +1,77 @@
-document.getElementById("loginButton").addEventListener("click", function() {
-    var bodyContent = document.getElementById("body_container");
-    bodyContent.innerHTML = `
-    <header class="cabecalho container">
-    <div class="__headerTop">
-        <figure class="--logo">
-            <img src="assets/imagens/logo.png" alt="Logo AluraGeek">
-        </figure>
-        <button class="__login">Login</button>
-        <div class="__barraDeBusca">
-            <input type="search" name="Buscar" id="buscar" placeholder="O que deseja encontrar?">
-            <img src="assets/imagens/Icone.svg" alt="Buscar" class="">
-        </div>
-    </div>
+/* function addUser(email, password) {
+    var newUser = {
+        email: email,
+        password: password
+    };
 
-</header>
+    users.push(newUser);
+} */
 
-<main class="login container">
+const admin = {
+    email: 'admin@alurageek.com',
+    password: 'minhaSenha123'
+};
 
-    <form class="__iniciarSessao" action="" method="get">
+const formIniciarSessao = document.querySelector('[data-__iniciaSessao]')
+const menssagemErro = document.querySelector('[data-error-messages]')
 
-        <p>Iniciar Sessão</p>
-        <input type="email" name="" id="" placeholder="Escreva seu email">
-        <input type="password" name="" id="" placeholder="Escreva sua senha">
-        <button class="__entrarBtn" type="submit">Entrar</button>
+formIniciarSessao.addEventListener('submit', function (event) {
+    event.preventDefault();
+    let user = {
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+    };    
 
-    </form>
+    if (validar(user.email) === false) {
+        mostrarMenssagemErro('Por gentileza sinalizar um email valido ex.: teste@teste.com');
+        const nomeEstilo = document.querySelector('.inputEmail')
+        nomeEstilo.style.border = '2px solid red';
+        console.log('erro no email')
 
-</main>
+    } else if (user.password.trim() === ''){
+        mostrarMenssagemErro('O campo senha é obrigatório');
+        const senhaEstilo = document.querySelector('.inputEmail')
+        senhaEstilo.style.border = '2px solid red';
+        console.log('erro na senha')
 
-<footer class="rodape container">
+    } else if (menssagemErro.innerHTML === '' && user.email === admin.email && user.password === admin.password) {
+        formulario.submit();
+        console.log('erro na validação final')
+    
+        //Se o elemento errorMessages não tiver nenhuma mensagem de erro (ou seja, o innerHTML está vazio), podemos enviar o formulário chamando o método submit() do objeto form.
 
-    <div class="__sobreEmpresa">
-
-
-
-        <ul class="__sobreDescr">
-            <img src="assets/imagens/Logo.png" alt="Logo AluraGeek" class="__logo">
-            <div class="__descri">
-                <li class="__descriItem"><a href="#">Quem somos nós</a></li>
-                <li class="__descriItem"><a href="#">Política de Privacidade</a></li>
-                <li class="__descriItem"><a href="#">Programa de fidelidade</a></li>
-                <li class="__descriItem"><a href="#">Nossas Lojas</a></li>
-                <li class="__descriItem"><a href="#">Quero ser franqueado</a></li>
-                <li class="__descriItem"><a href="#">Anuncie aqui</a></li>
-            </div>
-
-        </ul>
-        <form class="__formulario" action="" method="post">
-
-            <p class="__formTitulo">Fale Conosco</p>
-
-            <label class="__input-label">
-                <span>Nome</span>
-                <input class="__formNome" type="text" name="" id="" placeholder="Seu nome aqui">
-
-            </label>
-
-            <textarea class="__formMensagem" name="" id="" cols="30" rows="10"
-                placeholder="Escreva sua mensagem"></textarea>
-
-            <input class="__enviarMsgBtn" type="submit" value="Enviar Mensagem">
-        </form>
-    </div>
-
-</footer>
-
-<div class="__rodape">
-    <p class="__dev">Desenvolvido por Vitor Guilherme 2023</p>
-</div>
-    `;
-  });
+        alert('Muito obrigado pelo envio');
+    }
 
 
+
+    
+});
+
+function validar(email) {
+    // Expressão regular para validar o formato do email
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    return emailRegex.test(email);
+}
+
+
+
+/* function verificarCredenciais(email, password) {
+        // Realize a validação dos dados do usuário
+        // Aqui você pode usar a lógica específica para verificar se o email e senha estão corretos
+
+        if (email === 'admin@test.com' && password === 'minhaSenha123') {
+
+
+            mostrarMenssagemErro('O campo Nome é obrigatório.');
+            const nomeEstilo = document.querySelector('.__formNome')
+            nomeEstilo.style.border = '1px solid red';
+        }
+
+        // Exemplo simples: verifique se o email é 'usuario@example.com' e a senha é 'minhaSenha123'
+        if (email === 'usuario@example.com' && password === 'minhaSenha123') {
+            return true;
+        } else {
+            return false;
+        } */

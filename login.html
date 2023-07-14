@@ -40,12 +40,14 @@
 
     <main class="login container">
 
-        <form class="__iniciarSessao" action="" method="get">
+        <form class="__iniciarSessao" data-__iniciaSessao novalidate>
 
             <p>Iniciar Sessão</p>
-            <input type="email" name="" id="" placeholder="Escreva seu email">
-            <input type="password" name="" id="" placeholder="Escreva sua senha">
+            <input class="inputEmail" type="email" name="email" id="email" placeholder="Escreva seu email" required>
+            <input class="inputSenha" type="password" name="password" id="password" placeholder="Escreva sua senha" required>
             <button class="__entrarBtn" type="submit">Entrar</button>
+
+            <span class="error-messages" data-error-messages aria-hidden="true"></span>
 
         </form>
 
@@ -97,6 +99,7 @@
     </div>
 
     <script src="assets/program/validarFormulario.js"></script>
+    <script src="assets/program/login.js"></script>
 
 </body>
 
