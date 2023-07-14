@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/css/rodape/informaçõesEmpresa.css">
     <link rel="stylesheet" href="assets/css/rodape/contato.css">
 
+    <link rel="stylesheet" href="assets/css/error-messages.css">
+
 
 </head>
 
@@ -67,21 +69,25 @@
                 </div>
 
             </ul>
-            <form class="__formulario" action="" method="post">
+            <form class="__formulario" data-formulario novalidate>
 
                 <p class="__formTitulo">Fale Conosco</p>
 
                 <label class="__input-label">
                     <span>Nome</span>
-                    <input class="__formNome" type="text" name="" id="" placeholder="Seu nome aqui">
-
+                    <input class="__formNome" data-formNome type="text" name="nome" id="nome" maxlength="40"
+                        placeholder="Seu nome aqui" required>
                 </label>
 
-                <textarea class="__formMensagem" name="" id="" cols="30" rows="10"
-                    placeholder="Escreva sua mensagem"></textarea>
+                <textarea class="__formMensagem" data-formMensagem name="mensagem" id="mensagem" cols="30" rows="10"
+                    maxlength="120" placeholder="Escreva sua mensagem" required></textarea>
 
-                <input class="__enviarMsgBtn" type="submit" value="Enviar Mensagem">
+                <input class="__enviarMsgBtn" data-enviarMsgBtn type="submit" value="Enviar Mensagem">
+
+                <span class="error-messages" data-error-messages aria-hidden="true"></span>
+
             </form>
+
         </div>
 
     </footer>
@@ -90,6 +96,7 @@
         <p class="__dev">Desenvolvido por Vitor Guilherme 2023</p>
     </div>
 
+    <script src="assets/program/validarFormulario.js"></script>
 
 </body>
 

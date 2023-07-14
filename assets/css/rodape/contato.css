@@ -67,6 +67,11 @@
 
 }
 
+.error-messages{
+    color: red;
+    font-weight: 500;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .__formulario {
         align-self: stretch;
