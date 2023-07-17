@@ -13,34 +13,43 @@ const admin = {
 };
 
 const formIniciarSessao = document.querySelector('[data-__iniciaSessao]')
-const menssagemErro = document.querySelector('[data-error-messages]')
+const menssagensErro = document.querySelector('[data-error-validate]')
 
 formIniciarSessao.addEventListener('submit', function (event) {
+    
     event.preventDefault();
+
+    menssagensErro.innerHTML = '';
+
     let user = {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value
     };    
 
     if (validar(user.email) === false) {
-        mostrarMenssagemErro('Por gentileza sinalizar um email valido ex.: teste@teste.com');
+        mostrarMenssagemErroValidar('Por gentileza sinalizar um email valido ex.: teste@teste.com');
         const nomeEstilo = document.querySelector('.inputEmail')
         nomeEstilo.style.border = '2px solid red';
-        console.log('erro no email')
 
-    } else if (user.password.trim() === ''){
-        mostrarMenssagemErro('O campo senha é obrigatório');
-        const senhaEstilo = document.querySelector('.inputEmail')
-        senhaEstilo.style.border = '2px solid red';
-        console.log('erro na senha')
-
-    } else if (menssagemErro.innerHTML === '' && user.email === admin.email && user.password === admin.password) {
-        formulario.submit();
-        console.log('erro na validação final')
+    } 
     
-        //Se o elemento errorMessages não tiver nenhuma mensagem de erro (ou seja, o innerHTML está vazio), podemos enviar o formulário chamando o método submit() do objeto form.
+    if (user.password.trim() === ''){
+        mostrarMenssagemErroValidar('O campo senha é obrigatório');
+        const senhaEstilo = document.querySelector('.inputSenha')
+        senhaEstilo.style.border = '2px solid red';
 
-        alert('Muito obrigado pelo envio');
+    } 
+    
+    if (menssagensErro.innerHTML === '' && user.email === admin.email && user.password === admin.password) {
+          
+        //Se o elemento errorMessages não tiver nenhuma mensagem de erro (ou seja, o innerHTML está vazio), podemos enviar o formulário chamando o método submit() do objeto form.
+        alert('Seja bem vindo!');
+        window.location.href = 'loginIniciado.html';
+
+    } else {
+
+        mostrarMenssagemErroValidar('Houve um erro! O email ou senha estão errados.');
+
     }
 
 
@@ -56,22 +65,8 @@ function validar(email) {
 }
 
 
-
-/* function verificarCredenciais(email, password) {
-        // Realize a validação dos dados do usuário
-        // Aqui você pode usar a lógica específica para verificar se o email e senha estão corretos
-
-        if (email === 'admin@test.com' && password === 'minhaSenha123') {
-
-
-            mostrarMenssagemErro('O campo Nome é obrigatório.');
-            const nomeEstilo = document.querySelector('.__formNome')
-            nomeEstilo.style.border = '1px solid red';
-        }
-
-        // Exemplo simples: verifique se o email é 'usuario@example.com' e a senha é 'minhaSenha123'
-        if (email === 'usuario@example.com' && password === 'minhaSenha123') {
-            return true;
-        } else {
-            return false;
-        } */
+function mostrarMenssagemErroValidar(message) {
+    const menssagemErro = document.createElement('p');
+    menssagemErro.textContent = message;
+    menssagensErro.appendChild(menssagemErro);
+}

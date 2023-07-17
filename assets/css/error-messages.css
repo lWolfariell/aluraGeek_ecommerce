@@ -1,4 +1,9 @@
-.error-messages{
+.error-messages p{
+    color: red;
+    font-weight: 500;
+}
+
+.error-validar p{
     color: red;
     font-weight: 500;
 }
