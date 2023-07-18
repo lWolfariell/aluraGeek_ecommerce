@@ -1,0 +1,110 @@
+[
+  {
+    "id": "#1",
+    "categoria": "Star Wars",
+    "imagemUrl": "assets/imagens/bonecoTrooper.png",
+    "nomeProduto": "Boneco Trooper",
+    "valor": 60,
+    "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor massa ac elit consectetur, in finibus leo vestibulum. Proin at facilisis elit, ut dapibus purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras quis velit vitae tellus tempor fringilla id id augue.",
+    "desconto": 0
+  },
+  {
+    "id": "#2",
+    "categoria": "Star Wars",
+    "imagemUrl": "assets/imagens/bonecoYoda.png",
+    "nomeProduto": "Boneco Yoda",
+    "valor": 55,
+    "descricao": "Phasellus luctus, nulla vitae scelerisque ultrices, velit dolor tincidunt lectus, id pretium odio massa ac lectus. Sed ac scelerisque magna. Mauris pellentesque commodo leo ac fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed ut nibh et lectus facilisis scelerisque.",
+    "desconto": 0
+  },
+  {
+    "id": "#3",
+    "categoria": "Star Wars",
+    "imagemUrl": "assets/imagens/bonecoLego.png",
+    "nomeProduto": "Vader e Black Trooper Lego",
+    "valor": 99,
+    "descricao": "Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget interdum ex, id ullamcorper massa. Duis luctus gravida elit, nec rutrum sapien consequat eu. In finibus libero ut eros rhoncus, vitae venenatis turpis tempor.",
+    "desconto": 0
+  },
+  {
+    "id": "#4",
+    "categoria": "Star Wars",
+    "imagemUrl": "assets/imagens/canecaTrooper.png",
+    "nomeProduto": "Caneca Trooper",
+    "valor": 45,
+    "descricao": "Nullam vitae elit ut purus finibus rutrum sed nec mauris. Integer at lacus eu dui tincidunt consectetur. Praesent commodo placerat arcu, sed ultrices velit rhoncus vitae. Donec finibus dui at finibus rutrum.",
+    "desconto": 0
+  },
+  {
+    "id": "#5",
+    "categoria": "Consoles",
+    "imagemUrl": "assets/imagens/controleXbox.png",
+    "nomeProduto": "Controle Xbox",
+    "valor": 499,
+    "descricao": "Vivamus condimentum nisi vel commodo aliquam. Morbi in leo id sapien commodo consequat in vitae sem. Aliquam at aliquam ipsum, vitae venenatis odio. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin non nisi consectetur, suscipit ipsum vitae, feugiat lacus.",
+    "desconto": 164.67
+  },
+  {
+    "id": "#6",
+    "categoria": "Consoles",
+    "imagemUrl": "assets/imagens/consolePlaystation5.png",
+    "nomeProduto": "Playstation 5",
+    "valor": 3499,
+    "descricao": "Fusce ac risus a nunc malesuada hendrerit vel nec ligula. Nullam ultrices ullamcorper turpis sed facilisis. Cras in malesuada dui. Maecenas ullamcorper bibendum leo vitae aliquet. Etiam sit amet diam et erat posuere gravida. Aenean volutpat massa in nunc venenatis, ut auctor est eleifend.",
+    "desconto": 1154.67
+  },
+  {
+    "id": "#7",
+    "categoria": "Consoles",
+    "imagemUrl": "assets/imagens/controleJoy.png",
+    "nomeProduto": "Controle Joy",
+    "valor": 350,
+    "descricao": "Quisque commodo nunc id enim suscipit, in rutrum justo suscipit. Fusce eu efficitur leo. Aenean id magna at lacus elementum luctus vel vitae ipsum. Suspendisse et velit nec metus semper ullamcorper. Phasellus volutpat velit id lectus pellentesque, vel tempor turpis tempor.",
+    "desconto": 115.5
+  },
+  {
+    "id": "#8",
+    "categoria": "Consoles",
+    "imagemUrl": "assets/imagens/consoleNintendinho.png",
+    "nomeProduto": "Nintendo NES",
+    "valor": 999,
+    "descricao": "Sed aliquam bibendum eleifend. Ut elementum lorem et sem interdum, eget iaculis justo lacinia. Sed vel ante ut purus vestibulum feugiat non eu mi. Donec tristique luctus sagittis. Mauris consequat, lectus ac mattis volutpat, risus arcu aliquet ligula, in euismod odio enim sed turpis.",
+    "desconto": 329.67
+  },
+  {
+    "id": "#9",
+    "categoria": "Diversos",
+    "imagemUrl": "assets/imagens/camisaNintendo.png",
+    "nomeProduto": "Camisa Nintendinho",
+    "valor": 45,
+    "descricao": "Curabitur consectetur enim at dui malesuada dignissim. Proin viverra, lectus auctor laoreet tempor, urna ligula vehicula turpis, nec rutrum orci tortor et metus. Nulla vulputate euismod risus, id ultrices urna tristique vel. Nullam auctor viverra purus, sed hendrerit velit feugiat in.",
+    "desconto": 0
+  },
+  {
+    "id": "#10",
+    "categoria": "Diversos",
+    "imagemUrl": "assets/imagens/camisaAtari.png",
+    "nomeProduto": "Camisa Atari",
+    "valor": 45,
+    "descricao": "In sit amet magna eu tellus lacinia suscipit. Donec auctor, quam ac laoreet sagittis, odio risus tristique justo, sit amet faucibus est urna vitae tortor. Nullam eu justo eget nisi cursus finibus. Fusce efficitur lacinia sem, at congue mauris auctor non.",
+    "desconto": 0
+  },
+  {
+    "id": "#11",
+    "categoria": "Diversos",
+    "imagemUrl": "assets/imagens/radioRetro.png",
+    "nomeProduto": "Radio Retro",
+    "valor": 98.9,
+    "descricao": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut id finibus lacus. Integer eget enim volutpat, consequat nisi in, ultricies mauris. Suspendisse tincidunt hendrerit risus, eu malesuada sapien finibus sit amet. In nec eleifend mauris.",
+    "desconto": 0
+  },
+  {
+    "id": "#12",
+    "categoria": "Diversos",
+    "imagemUrl": "assets/imagens/bonecoSonic.png",
+    "nomeProduto": "Boneco Sonic",
+    "valor": 55,
+    "descricao": "Aliquam scelerisque rutrum urna at iaculis. Morbi ullamcorper arcu nec ullamcorper faucibus. Proin ut nunc dignissim, ullamcorper elit id, hendrerit elit. Suspendisse in diam sit amet tortor semper eleifend id at dolor.",
+    "desconto": 0
+  }
+]
