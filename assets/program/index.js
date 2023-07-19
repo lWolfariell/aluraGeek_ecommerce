@@ -59,3 +59,5 @@ function exibirProdutosPorCategoria(listaDeProdutos) {
         Dessa forma, os elementos do array se tornam uma sequência contínua de HTML. */
     }
 }
+
+
