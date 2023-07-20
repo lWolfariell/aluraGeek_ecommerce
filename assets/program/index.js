@@ -9,10 +9,10 @@ async function getBuscarProdutosDaApi() {
     const res = await fetch(endpointDaAPI); // utiliza o await para esperar a resposta (res) da chamada à API usando fetch
     produtos = await res.json(); // após obter a resposta é convertida em json e armazenado na variavel produtos
     exibirProdutosPorCategoria(produtos);
-
+    mostrarProdutosConsoles(produtos);
 }
 
-
+/* lista produtos home */
 const elementoParaInserirProdutos = document.getElementById('produtosContainer'); // definido onde vou inserir os produtos
 
 function exibirProdutosPorCategoria(listaDeProdutos) {
@@ -59,5 +59,10 @@ function exibirProdutosPorCategoria(listaDeProdutos) {
         Dessa forma, os elementos do array se tornam uma sequência contínua de HTML. */
     }
 }
+/* fim lista produtos home */
+
+
+
+
 
 
