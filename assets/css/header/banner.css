@@ -41,6 +41,8 @@
     color: var(--branco);
     font-size: 0.875rem;
     font-weight: 600;
+    text-decoration: none;
+    max-width: 130px;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
