@@ -10,7 +10,7 @@ async function getBuscarProdutosDaApi() {
   const res = await fetch(endpointDaAPI); // utiliza o await para esperar a resposta (res) da chamada à API usando fetch
   produtos = await res.json(); // após obter a resposta é convertida em json e armazenado na variavel produtos
   mostrarProdutosPorCategoria();
-  produtosSimilares();
+  produtosSimilares(produtos);
 }
 
 function mostrarProdutosPorCategoria() {
@@ -28,7 +28,7 @@ function mostrarProdutosPorCategoria() {
           <img src="${produto.imagemUrl}" alt="${produto.nomeProduto}">
           <p class="--nomeProd">${produto.nomeProduto}</p>
           <p class="--valor">R$${produto.valor},00</p>
-          <p class="--verProdLink"><a href="produtosSimilares.html?id=${produto.id}" data-id="${produto.id}">Ver Produto</a></p>
+          <p class="--verProdLink"><a href="produtosSimilares.html?id=${produto.id}&categoria=${produto.categoria}" data-id="${produto.id}">Ver Produto</a></p>
         </li>
       `;
     }
@@ -36,24 +36,44 @@ function mostrarProdutosPorCategoria() {
 }
 
 
-function produtosSimilares(produtosid) {
+function produtosSimilares() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get('id');
+  const categoriaDoProduto = urlParams.get('categoria')
 
+  // Encontra o produto correspondente ao ID na lista de produtos
   const produtoClicado = produtos.find(produto => produto.id === id);
+
   if (produtoClicado) {
+
     const elementoParaInserirProdutoClicado = document.querySelector('.__prodClicadoContainer');
     elementoParaInserirProdutoClicado.innerHTML = `
       <figure class="__imgProd">
-        <img src="${produtoClicado.imagemUrl}" alt="">
+        <img src="${produtoClicado.imagemUrl}" alt="${produtoClicado.nomeProduto}">
       </figure>
 
       <div class="__infoProd">
         <p class="__tituloProd">${produtoClicado.nomeProduto}</p>
-        <p class="__valorProd">R$${produtoClicado.valor}</p>
+        <p class="__valorProd">R$${produtoClicado.valor},00</p>
         <p class="__descriProd">${produtoClicado.descricao}</p>
       </div>
     `;
+
+    const elementoParaInserirProdutoClicado2 = document.querySelector('.__listarProdutos');
+    if (elementoParaInserirProdutoClicado2) {
+      produtos.forEach(produto => {
+        if (produto.categoria === categoriaDoProduto && produto.id !== id) {
+          elementoParaInserirProdutoClicado2.innerHTML += `
+          <li class="__produto" data-id="${produto.id}">
+            <img src="${produto.imagemUrl}" alt="${produto.nomeProduto}">
+            <p class="--nomeProd">${produto.nomeProduto}</p>
+            <p class="--valor">R$${produto.valor},00</p>
+            <p class="--verProdLink"><a href="produtosSimilares.html?id=${produto.id}&categoria=${produto.categoria}" data-id="${produto.id}">Ver Produto</a></p>
+          </li>
+        `;
+        }
+      });
+    }
   }
 }
 
