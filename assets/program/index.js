@@ -28,34 +28,33 @@ function mostrarProdutosPorCategoria() {
           <img src="${produto.imagemUrl}" alt="${produto.nomeProduto}">
           <p class="--nomeProd">${produto.nomeProduto}</p>
           <p class="--valor">R$${produto.valor},00</p>
-          <p class="--verProdLink"><a href="produtosSimilares.html?id=${produto.id}">Ver Produto</a></p>
+          <p class="--verProdLink"><a href="produtosSimilares.html?id=${produto.id}" data-id="${produto.id}">Ver Produto</a></p>
         </li>
       `;
     }
   });
 }
 
+
 function produtosSimilares(produtosid) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
 
-  const produtoElemento = document.querySelector('.__produto');
-  console.log(produtoElemento)
-  const elementoParaInserirProdutoClicado = document.querySelector('.__prodClicadoContainer')
-  elementoParaInserirProdutoClicado.innerHTML = ''
+  const produtoClicado = produtos.find(produto => produto.id === id);
+  if (produtoClicado) {
+    const elementoParaInserirProdutoClicado = document.querySelector('.__prodClicadoContainer');
+    elementoParaInserirProdutoClicado.innerHTML = `
+      <figure class="__imgProd">
+        <img src="${produtoClicado.imagemUrl}" alt="">
+      </figure>
 
-  elementoParaInserirProdutoClicado.innerHTML += `
-  <figure class="__imgProd">
-                <img src="${produtos.imagemUrl}" alt="">
-            </figure>
-
-            <div class="__infoProd">
-                <p class="__tituloProd">${produtos.nomeProduto}</p>
-                <p class="__valorProd">R$${produtos.valor}</p>
-                <p class="__descriProd">${produtos.descricao}</p>
-            </div>
-  `
-
-
-
+      <div class="__infoProd">
+        <p class="__tituloProd">${produtoClicado.nomeProduto}</p>
+        <p class="__valorProd">R$${produtoClicado.valor}</p>
+        <p class="__descriProd">${produtoClicado.descricao}</p>
+      </div>
+    `;
+  }
 }
 
 
