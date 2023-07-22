@@ -23,6 +23,7 @@
     border: none;
     background: var(--azul-100);
     width: 13rem;
+    cursor: pointer;
 }
 
 .__adcionarProdutoBtn a {

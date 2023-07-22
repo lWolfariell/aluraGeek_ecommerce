@@ -27,12 +27,12 @@
 
         <div class="__headerTop">
             <figure class="--logo">
-                <img src="assets/imagens/logo.png" alt="Logo AluraGeek">
+                <img src="../imagens/logo.png" alt="Logo AluraGeek">
             </figure>
             <button class="__login"><a href="login.html">Login</a></button>
             <div class="__barraDeBusca">
                 <input type="search" name="Buscar" id="buscar" placeholder="O que deseja encontrar?">
-                <img src="assets/imagens/Icone.svg" alt="Buscar" class="">
+                <img src="../imagens/Icone.svg" alt="Buscar" class="">
             </div>
         </div>
 
@@ -44,25 +44,10 @@
 
             <div class="__todosProdutos-top">
                 <p class="__todosProdutosIitulo">Todos os Produtos</p>
-                <button class="__adcionarProdutoBtn"><a href="#">Adcionar produto</a></button>
+                <button class="__adcionarProdutoBtn"><a href="adcionarProduto.html">Adcionar produto</a></button>
             </div>
 
-            <ul class="__listarProdutos">
-
-                <li class="__produto">
-                    <figure class="img-container">
-                        <img class="prodImg" src="/assets/imagens/bonecoLego.png" alt="Produto XYZ">
-                        <div class="iconsImgs">
-                            <img class="removeIcon" src="assets/imagens/icons8-lixeira.svg" alt="remover">
-                            <img class="editIcon" src="assets/imagens/icons8-lápis-24.png" alt="editar">
-                        </div>
-                    </figure>
-                    <p class="--nomeProd">Produto XYZ</p>
-                    <p class="--valor">R$60,00</p>
-                    <p class="--verProdLink"><a href="#">Ver Produto</a></p>
-                </li>
-
-
+            <ul class="__listarProdutos" id="listarProdutos">          
 
             </ul>
 
@@ -118,6 +103,7 @@
 
     <script src="assets/program/index.js"></script>
     <script src="assets/program/validarFormulario.js"></script>
+    <script src="assets/program/adcionarProduto.js"></script>
 </body>
 
 </html>

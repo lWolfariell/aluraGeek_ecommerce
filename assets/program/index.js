@@ -11,6 +11,7 @@ async function getBuscarProdutosDaApi() {
   produtos = await res.json(); // após obter a resposta é convertida em json e armazenado na variavel produtos
   mostrarProdutosPorCategoria();
   produtosSimilares(produtos);
+  todosOsProdutos(produtos);
 }
 
 function mostrarProdutosPorCategoria() {
@@ -76,6 +77,33 @@ function produtosSimilares() {
     }
   }
 }
+
+
+function todosOsProdutos(listaDosProdutos) {
+  const elementoParaInserirTodosOsProdutos = document.getElementById('listarProdutos');
+
+  elementoParaInserirTodosOsProdutos.innerHTML = ''
+
+  listaDosProdutos.forEach(produto => {
+    elementoParaInserirTodosOsProdutos.innerHTML += `
+    <li class="__produto">
+                    <figure class="img-container">
+                        <img class="prodImg" src="${produto.imagemUrl}" alt="${produto.nomeProduto}">
+                        <div class="iconsImgs">
+                            <img class="removeIcon" src="assets/imagens/icons8-lixeira.svg" alt="remover">
+                            <img class="editIcon" src="assets/imagens/icons8-lápis-24.png" alt="editar">                            
+                        </div>
+                    </figure>
+                    <p class="--nomeProd">${produto.nomeProduto}</p>
+                    <p class="--valor">R$${produto.valor},00</p>
+                    <p class="--verProdLink"><a href="produtosSimilares.html?id=${produto.id}&categoria=${produto.categoria}" data-id="${produtos.id}">Ver Produto</a></p>
+                </li>
+    
+    `;
+  });
+
+};
+
 
 
 
