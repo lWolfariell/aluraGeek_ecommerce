@@ -38,44 +38,31 @@
 
     <main class="inserir container">
 
-        <form class="__inserirProdutos" action="" method="get">
+        <form class="__inserirProdutos" data-inserirProdutos>
 
             <p>Adcionar novo produto</p>
 
-            <div class="__secaoInserirImagem">
-
-                <div class="__espacoArrasteArquivo">
-                    <p>Arraste sua imagem aqui</p>
-                </div>
-
-                <p>Ou</p>
-
-                <div class="__inserirImagem">
-                    <label for="arquivo">Inserir Imagem</label>
-                    <input type="file" name="arquivo" id="inserirImagem">
-                </div>
-
-            </div>
-
-
             <div class="__selecionarCategoria">
                 <label for="categoria">Selecione a categoria:</label>
-                <select id="categoria" name="Escolha a categoria">
-                    <option value="star Wars">Star Wars</option>
-                    <option value="console">Console</option>
-                    <option value="diversos">Diversos</option>
+                <select id="categoria" name="Escolha a categoria" required>
+                    <option value="Star Wars">Star Wars</option>
+                    <option value="Console">Console</option>
+                    <option value="Diversos">Diversos</option>
                 </select>
 
             </div>
 
             <div class="__preencher">
-                
-                <input class="__preencher" type="text" name="" id="nomeProd" placeholder="Produto XYZ">
 
-                <input class="__preencher" classtype="text" name="" id="prcProd" placeholder="Preço do Produto">
+                <input class="__preencher" type="text" name="" id="inserirImagem" placeholder="Url da imagem" required >
 
-                <textarea class="__preencher" name="descricao do produto" id="" cols="30" rows="10"
-                    placeholder="Descricão do Produto"></textarea>
+                <input class="__preencher" type="text" name="" id="nomeProd" placeholder="Produto XYZ" required>
+
+                <input class="__preencher" classtype="text" name="" id="prcProd" placeholder="Preço do Produto" required>
+
+                <textarea class="__preencher" name="descricao do produto" id="descrProduto" cols="30" rows="10"
+                    placeholder="Descricão do Produto" required>
+                </textarea>
 
             </div>
 
@@ -129,8 +116,10 @@
         <p class="__dev">Desenvolvido por Vitor Guilherme 2023</p>
     </div>
 
-    <script src="assets/js/index.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
     <script src="assets/js/validarFormulario.js"></script>
+    <script src="assets/js/adcionarProduto.js"></script>
+    
 
 </body>
 
