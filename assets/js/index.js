@@ -15,7 +15,7 @@ async function getBuscarProdutosDaApi() {
 }
 
 function mostrarProdutosPorCategoria() {
-  const elementosOndeSerãoInseridos = {
+  const elementosOndeSeraoInseridos = {
     'Star Wars': document.getElementById('listar1'),
     'Consoles': document.getElementById('listar2'),
     'Diversos': document.getElementById('listar3'),
@@ -23,8 +23,8 @@ function mostrarProdutosPorCategoria() {
 
   produtos.forEach(produto => {
     const categoria = produto.categoria;
-    if (elementosOndeSerãoInseridos[categoria]) {
-      elementosOndeSerãoInseridos[categoria].innerHTML += `
+    if (elementosOndeSeraoInseridos[categoria]) {
+      elementosOndeSeraoInseridos[categoria].innerHTML += `
         <li class="__produto" data-id="${produto.id}">
           <img src="${produto.imagemUrl}" alt="${produto.nomeProduto}">
           <p class="--nomeProd">${produto.nomeProduto}</p>
