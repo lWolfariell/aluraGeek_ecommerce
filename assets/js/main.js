@@ -53,10 +53,9 @@ function verificarSeOUsuarioEstáLogado() {
 
   } else {
 
-    botaoLogin.style.display = "block";
     // Caso o parâmetro 'email' não esteja presente, faça outra coisa
     // Exemplo: exibir uma mensagem de erro
-    alert('O parâmetro "email" não foi encontrado na URL.');
+    console.log('O usuario não está logado');
   }
 }
 
