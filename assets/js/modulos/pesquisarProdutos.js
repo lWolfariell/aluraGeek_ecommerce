@@ -1,0 +1,3 @@
+export { pesquisarProdutos }
+
+function pesquisarProdutos (){}
